@@ -9,8 +9,8 @@ class Config(object):
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     POSTS_PER_PAGE = 20
     MAX_CONTENT_LENGTH = 100 * 1024 * 1024
-    UPLOAD_FOLDER = '/mnt/nfs/work/chinzo/Projects/vendor-upload/app/static/files'
-    UPLOAD_FOLDER1 = '/app/static/files'
+    # UPLOAD_FOLDER1 = '/mnt/nfs/work/chinzo/Projects/vendor-upload/app/static/files'
+    UPLOAD_FOLDER = '/app/static/files'
     # MAIL_SERVER = os.environ.get('MAIL_SERVER')
     # MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)
     # MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
