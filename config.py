@@ -34,3 +34,4 @@ class Config(object):
     # Flask-Security features
     SECURITY_REGISTERABLE = True
     SECURITY_SEND_REGISTER_EMAIL = False
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
