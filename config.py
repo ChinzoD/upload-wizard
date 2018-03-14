@@ -17,21 +17,31 @@ class Config(object):
     # MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     # ADMINS = ['chinzo.dandar@gmail.com']
 
-    # Flask-Security config
-    SECURITY_URL_PREFIX = "/admin"
-    SECURITY_PASSWORD_HASH = "pbkdf2_sha512"
-    SECURITY_PASSWORD_SALT = "ATGUOHAELKiubahiughaerGOJAEGj"
-
+    # # Flask-Security config
+    # SECURITY_URL_PREFIX = "/admin"
+    # SECURITY_PASSWORD_HASH = "pbkdf2_sha512"
+    # SECURITY_PASSWORD_SALT = "ATGUOHAELKiubahiughaerGOJAEGj"
+    #
     # Flask-Security URLs, overridden because they don't put a / at the end
-    SECURITY_LOGIN_URL = "/login/"
-    SECURITY_LOGOUT_URL = "/logout/"
-    SECURITY_REGISTER_URL = "/register/"
-
-    SECURITY_POST_LOGIN_VIEW = "/admin/"
-    SECURITY_POST_LOGOUT_VIEW = "/admin/"
-    SECURITY_POST_REGISTER_VIEW = "/admin/"
+    # SECURITY_LOGIN_URL = "/login/"
+    # SECURITY_LOGOUT_URL = "/logout/"
+    # SECURITY_REGISTER_URL = "/register/"
+    #
+    # SECURITY_POST_LOGIN_VIEW = "/admin/"
+    # SECURITY_POST_LOGOUT_VIEW = "/admin/"
+    # SECURITY_POST_REGISTER_VIEW = "/admin/"
 
     # Flask-Security features
-    SECURITY_REGISTERABLE = True
-    SECURITY_SEND_REGISTER_EMAIL = False
-    SQLALCHEMY_TRACK_MODIFICATIONS = False
+    # SECURITY_REGISTERABLE = True
+    # SECURITY_SEND_REGISTER_EMAIL = False
+    # SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    CSRF_ENABLED = True
+    USER_ENABLE_REGISTER = True
+    # USER_ENABLE_EMAIL = True
+    # Flask-User settings
+    # USER_APP_NAME = "Flask-User Basic App"  # Shown in and email templates and page footers
+    USER_ENABLE_EMAIL = False  # Enable email authentication
+    USER_ENABLE_USERNAME = True  # Disable username authentication
+    # USER_EMAIL_SENDER_NAME = USER_APP_NAME
+    # USER_EMAIL_SENDER_EMAIL = "noreply@example.com"
