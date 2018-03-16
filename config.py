@@ -7,7 +7,7 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
                               'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    POSTS_PER_PAGE = 20
+    LISTS_PER_PAGE = 20
     MAX_CONTENT_LENGTH = 100 * 1024 * 1024
     UPLOAD_FOLDER = 'app/static/files/'
     # MAIL_SERVER = os.environ.get('MAIL_SERVER')
@@ -36,12 +36,23 @@ class Config(object):
     # SECURITY_SEND_REGISTER_EMAIL = False
     # SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    CSRF_ENABLED = True
-    USER_ENABLE_REGISTER = True
-    # USER_ENABLE_EMAIL = True
+    # Flask-Mail SMTP server settings
+    MAIL_SERVER = 'smtp.gmail.com'
+    MAIL_PORT = 465
+    MAIL_USE_SSL = True
+    MAIL_USE_TLS = False
+
+    # Flask-Mail SMTP account settings
+    MAIL_USERNAME = 'chinzo.dandar@gmail.com'
+    MAIL_PASSWORD = 'password'
+    MAIL_DEFAULT_SENDER = 'chinzo.dandar@gmail.com'
+
     # Flask-User settings
-    # USER_APP_NAME = "Flask-User Basic App"  # Shown in and email templates and page footers
-    USER_ENABLE_EMAIL = False  # Enable email authentication
+    USER_APP_NAME = "Flask-User Basic App"  # Shown in and email templates and page footers
+    USER_ENABLE_EMAIL = True  # Enable email authentication
     USER_ENABLE_USERNAME = True  # Disable username authentication
-    # USER_EMAIL_SENDER_NAME = USER_APP_NAME
-    # USER_EMAIL_SENDER_EMAIL = "noreply@example.com"
+    USER_EMAIL_SENDER_NAME = USER_APP_NAME
+    USER_EMAIL_SENDER_EMAIL = "chinzo.dandar@gmail.com"
+
+    CSRF_ENABLED = True
+
