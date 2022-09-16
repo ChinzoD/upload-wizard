@@ -56,7 +56,7 @@ JPype1==0.6.3
 jsonschema==2.6.0
 kombu==4.2.1
 lml==0.0.1
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.1.0
 openpyxl==2.5.4
 passlib==1.7.1
